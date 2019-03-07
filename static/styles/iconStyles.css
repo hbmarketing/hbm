@@ -1,0 +1,21 @@
+.fa-angle-left {
+  color: white;
+}
+
+.fa-angle-right {
+  color: white;
+}
+
+.fa-circle {
+  color: white;
+  padding: 0 0.2em;
+}
+
+.to-left,
+.to-right {
+  font-size: 70px;
+}
+
+.image-number-indicator {
+  font-size: 15px;
+}

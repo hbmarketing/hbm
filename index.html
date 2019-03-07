@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBM</title>
+    <script type="text/javascript">
+
+      document.addEventListener('DOMContentLoaded', downloadPage);
+
+      function downloadPage() {
+        var divContainer = document.createElement('div');
+        var h = document.createElement('div');
+        var b = document.createElement('div');
+        var m = document.createElement('div');
+        var spanH = document.createElement('span');
+        var spanB = document.createElement('span');
+        var spanM = document.createElement('span');
+
+        h.className = 'flelem';
+        b.className = 'flelem';
+        m.className = 'flelem';
+        spanH.className = 'spanH';
+        spanB.className = 'spanB';
+        spanM.className = 'spanM';
+
+        spanH.innerHTML = 'H';
+        spanB.innerHTML = 'B';
+        spanM.innerHTML = 'M';
+
+        h.append(spanH);
+        b.append(spanB);
+        m.append(spanM);
+        divContainer.append(h);
+        divContainer.append(b);
+        divContainer.append(m);
+
+        divContainer.style.cssText = " \
+          display: flex; \
+          justify-content: center; \
+          align-items: center; \
+          background-color: black; \
+          position: fixed; \
+          top: 0; \
+          left: 0; \
+          width: 100%; \
+          height: 100%; \
+          z-index: 3000; \
+        ";
+        h.style.cssText = " \
+          display: flex; \
+          justify-content: center; \
+          align-items: center; \
+          color: white; \
+          width: 30%; \
+          height: 50%; \
+        ";
+        b.style.cssText = " \
+          display: flex; \
+          justify-content: center; \
+          align-items: center; \
+          color: white; \
+          width: 30%; \
+          height: 50%; \
+        ";
+        m.style.cssText = " \
+          display: flex; \
+          justify-content: center; \
+          align-items: center; \
+          color: white; \
+          width: 30%; \
+          height: 50%; \
+        ";
+
+        var animationH = spanH.animate(
+          [
+            {fontSize: "0"},
+            {fontSize: "1500%"}
+          ],
+          {
+            duration: 300,
+            fill: 'forwards'
+          }
+        );
+
+        var animationB = spanB.animate(
+          [
+            {fontSize: "0"},
+            {fontSize: "1500%"}
+          ],
+          {
+            duration: 300,
+            fill: 'forwards'
+          }
+        );
+
+        var animationM = spanM.animate(
+          [
+            {fontSize: "0"},
+            {fontSize: "1500%"}
+          ],
+          {
+            duration: 300,
+            fill: 'forwards'
+          }
+        );
+
+        function divContainerRemove() {
+          divContainer.remove();
+        }
+
+        document.body.append(divContainer);
+
+        animationH.pause();
+        animationB.pause();
+        animationM.pause();
+        animationH.addEventListener('finish', () => animationB.play());
+        animationB.addEventListener('finish', () => animationM.play());
+        animationM.addEventListener('finish', () => setTimeout(divContainerRemove, 200));
+        animationH.play();
+
+
+
+      }
+
+    </script>
+    <link rel="stylesheet" href="static/styles/sliderStyles.css">
+    <link rel="stylesheet" href="static/styles/documentStyles.css">
+    <link rel="stylesheet" href="static/styles/iconStyles.css">
+    <link rel="stylesheet" href="static/styles/positionStyles.css">
+    <link rel="stylesheet" href="static/styles/headerStyles.css">
+    <link rel="stylesheet" href="static/styles/carouselStyles.css">
+    <script src="static/scripts/sizer.js"></script>
+    <script src="static/scripts/slider.js"></script>
+    <script src="static/scripts/carousel.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  </head>
+  <body>
+    <header>
+      <nav>
+
+      </nav>
+      <div class="company-utp">
+
+      </div>
+    </header>
+
+    <div class="marketing-kit">
+      <div class="to-left">
+        <i class="fas fa-angle-left"></i>
+      </div>
+      <div class="to-right">
+        <i class="fas fa-angle-right"></i>
+      </div>
+      <div class="image-number-indicator">
+        <i id="indicator-1" class="fas fa-circle"></i>
+        <!-- <i id="indicator-2" class="fas fa-circle"></i><i id="indicator-3" class="fas fa-circle"></i> -->
+      </div>
+      <div class="read-about">
+
+      </div>
+    </div>
+    <div class="kit">
+
+    </div>
+
+    <div class="about-company">
+
+    </div>
+
+    <div class="our-clients">
+      <div class="scroll-left"></div>
+      <div class="carousel"></div>
+      <div class="scroll-right"></div>
+    </div>
+
+    <footer>
+
+    </footer>
+  </body>
+</html>
