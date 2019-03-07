@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   var rightScroll = document.querySelector('.scroll-right');
   var leftScroll = document.querySelector('.scroll-left');
 
-  carousel.style.width = (document.body.clientWidth - rightScroll.offsetWidth - leftScroll.offsetWidth) + 'px';
+  // carousel.style.width = (document.body.clientWidth - rightScroll.offsetWidth - leftScroll.offsetWidth) + 'px';
   var carouselClientWidth = carousel.clientWidth;
   var objInCarousel = Math.floor(carouselClientWidth / imageWidthValue);
   var previousNumObjInCarousel = objInCarousel;
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
   window.addEventListener('resize', () => {
-    carousel.style.width = (document.body.clientWidth - rightScroll.offsetWidth - leftScroll.offsetWidth) + 'px';
+    // carousel.style.width = (document.body.clientWidth - rightScroll.offsetWidth - leftScroll.offsetWidth) + 'px';
     carouselClientWidth = carousel.clientWidth;
     objInCarousel = Math.floor(carouselClientWidth / imageWidthValue);
     if (objInCarousel != previousNumObjInCarousel) changesAfterResize();
