@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   var maxNumberOfLogos = 6;
   var qurrentImageNum = 0;
-  var imageWidthValue = 250;
+  var imageWidthValue = 200;
 
   var ourClientsContainer = document.querySelector('.our-clients');
   var carousel = document.querySelector('.carousel');
