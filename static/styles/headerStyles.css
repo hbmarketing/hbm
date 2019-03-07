@@ -55,13 +55,16 @@ nav {
 .icon-burger {
   display: none;
   font-size: 55px;
+  cursor: pointer;
 }
 .icon-close {
   display: none;
   font-size: 75px;
+  line-height: 0;
+  cursor: pointer;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 719px) {
   .nav-item {
     display: none;
   }
