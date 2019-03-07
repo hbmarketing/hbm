@@ -5,9 +5,14 @@ header {
 
 .head {
   display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3000;
   background-color: black;
   color: white;
-  padding: 20px;
+  padding: 15px;
 }
 
 .logo {
@@ -18,11 +23,10 @@ header {
 .hbm-text {
   font-weight: bold;
   font-size: 40px;
-  padding-bottom: 5px;
 }
 
 .hayr-text {
-  font-size: 15px;
+  font-size: 20px;
 }
 
 nav {
@@ -36,9 +40,23 @@ nav {
 
 .nav-item {
   margin: 0 10px;
+  padding: 20px 0;
+}
+
+.nav-item:hover {
+  border-bottom: 3px solid white;
 }
 
 .nav-item a {
   color: white;
   text-decoration: none;
+}
+
+.icon-burger {
+  display: none;
+  font-size: 55px;
+}
+.icon-close {
+  display: none;
+  font-size: 75px;
 }
