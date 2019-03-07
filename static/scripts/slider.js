@@ -38,7 +38,7 @@ function imageNameNumberDec() {
 }
 
 function setMarketingkitsBackground() {
-  document.querySelector('.marketing-kit').style.background = '#000 url("static/slider-images/' + imageNameNumber + '.svg") center center no-repeat';
+  document.querySelector('.marketing-kit').style.background = '#000 url("static/slider-images/' + imageNameNumber + '.jpg") center center no-repeat';
   document.querySelector('.marketing-kit').style.backgroundSize = '100%';
 }
 
