@@ -28,4 +28,15 @@ document.addEventListener('DOMContentLoaded', () => {
     burger.style.display = 'block';
     nav2Animate('0', '-100%');
   }
+
+  window.addEventListener('resize', () => {
+    if (document.body.clientWidth >= 720) {
+      burger.style.display = 'none';
+      close.style.display = 'none';
+      nav2.style.right = '-100%';
+    }
+    else if (document.body.clientWidth < 720) {
+      burger.style.display = 'block';
+    }
+  })
 })
