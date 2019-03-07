@@ -1,6 +1,4 @@
 header {
     width: 100%;
     height: 100vh;
-    background: fixed #000 url('../header.jpg') no-repeat;
-    background-size: cover;
 }
