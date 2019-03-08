@@ -1,0 +1,22 @@
+.our-clients {
+  max-width: 100%;
+  display: flex;
+}
+
+.carousel {
+  display: flex;
+  justify-content: space-around;
+  flex-grow: 1;
+  min-width: 200px;
+}
+
+.scroll-left,
+.scroll-right {
+  background-color: red;
+  flex-basis: 40px;
+  min-width: 40px;
+}
+
+.carousel div img {
+  width: 200px;
+}
