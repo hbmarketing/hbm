@@ -8,6 +8,7 @@
   justify-content: space-around;
   flex-grow: 1;
   min-width: 200px;
+  overflow-x: hidden;
 }
 
 .scroll-left,
@@ -17,6 +18,11 @@
   min-width: 40px;
 }
 
-.carousel div img {
+.clients-logos-container {
+  display: flex;
+  width: 1400px;
+}
+
+.clients-logos-container div img {
   width: 200px;
 }
