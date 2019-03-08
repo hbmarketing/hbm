@@ -1,4 +1,55 @@
 .marketing-kit {
+  position: relative;
   width: 100%;
   height: 100vh;
+}
+
+.kit-images-container {
+  display: flex;
+  width: 200%;
+  height: 100%;
+}
+
+.kit-image {
+  display: flex;
+  width: 100vw;
+  height: 100%;
+}
+
+.kit-image:nth-child(1) {
+  background: #000 url('../slider-images/1.svg') center center no-repeat;
+  background-size: cover;
+}
+
+.kit-image:nth-child(2) {
+  background: #000 url('../slider-images/2.svg') center center no-repeat;
+  background-size: cover;
+}
+
+.to-left,
+.to-right {
+  position: absolute;
+  top: 45%;
+  font-size: 70px;
+  color: white;
+}
+
+.to-left {
+  left: 10px;
+}
+
+.to-right {
+  right: 10px;
+}
+
+.image-number-indicator {
+  position: absolute;
+  bottom: 20px;
+  left: 47%;
+  font-size: 15px;
+}
+
+.fa-circle {
+  color: white;
+  padding: 0 0.2em;
 }

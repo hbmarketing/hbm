@@ -27,6 +27,7 @@ header {
 
 .hayr-text {
   font-size: 20px;
+  font-weight: lighter;
 }
 
 nav {
@@ -68,7 +69,7 @@ nav {
   display: flex;
   flex-direction: column;
   position: fixed;
-  top: 110px;
+  top: 95px;
   right: -100%;
   z-index: 2999;
   background-color: black;
