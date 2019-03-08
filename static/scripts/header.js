@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   var close = document.querySelector('.icon-close');
   var head = document.querySelector('.head');
   var nav2 = document.querySelector('.nav2');
+  var navItem = document.querySelector('.nav-item');
 
   function nav2Animate(first, second) {
     nav2.animate(
@@ -30,12 +31,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   window.addEventListener('resize', () => {
-    if (document.body.clientWidth >= 720) {
+    if (getComputedStyle(navItem).display == 'block') {
       burger.style.display = 'none';
       close.style.display = 'none';
       nav2.style.right = '-100%';
     }
-    else if (document.body.clientWidth < 720) {
+    else if (getComputedStyle(navItem).display == 'none' && getComputedStyle(close).display == 'none') {
       burger.style.display = 'block';
     }
   })

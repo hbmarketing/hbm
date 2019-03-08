@@ -68,13 +68,13 @@ nav {
   display: flex;
   flex-direction: column;
   position: fixed;
-  top: 112px;
+  top: 110px;
   right: -100%;
-  z-index: 3000;
+  z-index: 2999;
   background-color: black;
   font-size: 20px;
   font-weight: bold;
-  padding: 20px;
+  padding: 30px 20px;
 }
 
 .nav2-item {
