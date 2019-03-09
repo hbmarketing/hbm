@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  var transformValue = 200;
+
   var ourClientsContainer = document.querySelector('.our-clients');
   var carousel = document.querySelector('.carousel');
   var rightScroll = document.querySelector('.scroll-right');

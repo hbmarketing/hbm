@@ -7,13 +7,17 @@ document.addEventListener('DOMContentLoaded', () => {
   var marketingKit = document.querySelector('.marketing-kit');
   var headOffsetHeight = document.querySelector('.head').offsetHeight;
 
-  marketingKit.style.height = (document.documentElement.clientHeight - headOffsetHeight) + 'px';
+  // marketingKit.style.height = (document.documentElement.clientHeight - headOffsetHeight) + 'px';
+  var vhForHeader = document.documentElement.clientHeight / 100;
+  marketingKit.style.height = ((document.documentElement.clientHeight - headOffsetHeight) / vhForHeader) + 'vh';
 
   indicatorsColorChange()
   setAnglesColor()
 
   window.addEventListener('resize', () => {
-    marketingKit.style.height = (document.documentElement.clientHeight - headOffsetHeight) + 'px';
+    // marketingKit.style.height = (document.documentElement.clientHeight - headOffsetHeight) + 'px';
+    var vhForHeader = document.documentElement.clientHeight / 100;
+    marketingKit.style.height = ((document.documentElement.clientHeight - headOffsetHeight) / vhForHeader) + 'vh';
   })
 
   // xhrRequest()
