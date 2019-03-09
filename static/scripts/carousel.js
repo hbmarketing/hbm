@@ -15,14 +15,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   ourClientsContainer.addEventListener('click', event => {
     if (carousel.offsetWidth < clientsLogosContainer.offsetWidth) {
-      if (event.target == leftScroll) {
-        let logosTranslateX = Math.abs(getLogosTranslateX()) - 200;
-        console.log(logosTranslateX)
-        clientsLogosContainer.style.transform = 'translateX(' + (logosTranslateX - (transformValue - (logosTranslateX % transformValue))) + 'px)'
+      let translater;
+      if (event.target == rightScroll) {
+        translater = Math.abs(getLogosTranslateX()) + (transformValue - ((Math.abs(getLogosTranslateX()) + carousel.clientWidth) % transformValue));
+        clientsLogosContainer.style.transform = 'translateX(-' + translater + 'px)';
       }
-      else if (event.target == rightScroll) {
-        let logosTranslateX = Math.abs(getLogosTranslateX());
-        clientsLogosContainer.style.transform = 'translateX(-' + (logosTranslateX + (transformValue - (logosTranslateX % transformValue))) + 'px)'
+      else if (event.target == leftScroll) {
+        if (transformValue - (transformValue - (Math.abs(getLogosTranslateX()) % transformValue))) {
+          translater = Math.abs(getLogosTranslateX()) - (transformValue - (transformValue - (Math.abs(getLogosTranslateX()) % transformValue)));
+        } else {
+          translater = Math.abs(getLogosTranslateX()) - (transformValue - (Math.abs(getLogosTranslateX()) % transformValue));
+        }
+        clientsLogosContainer.style.transform = 'translateX(-' + translater + 'px)';
       }
     }
   })
