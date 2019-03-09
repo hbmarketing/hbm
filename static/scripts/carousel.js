@@ -14,11 +14,16 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   ourClientsContainer.addEventListener('click', event => {
-    if (event.target == leftScroll) {
-
-    }
-    else if (event.target == rightScroll) {
-
+    if (carousel.offsetWidth < clientsLogosContainer.offsetWidth) {
+      if (event.target == leftScroll) {
+        let logosTranslateX = Math.abs(getLogosTranslateX()) - 200;
+        console.log(logosTranslateX)
+        clientsLogosContainer.style.transform = 'translateX(' + (logosTranslateX - (transformValue - (logosTranslateX % transformValue))) + 'px)'
+      }
+      else if (event.target == rightScroll) {
+        let logosTranslateX = Math.abs(getLogosTranslateX());
+        clientsLogosContainer.style.transform = 'translateX(-' + (logosTranslateX + (transformValue - (logosTranslateX % transformValue))) + 'px)'
+      }
     }
   })
 

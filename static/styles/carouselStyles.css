@@ -4,8 +4,6 @@
 }
 
 .carousel {
-  display: flex;
-  justify-content: space-around;
   flex-grow: 1;
   min-width: 200px;
   overflow-x: hidden;
@@ -21,6 +19,9 @@
 .clients-logos-container {
   display: flex;
   width: 1400px;
+  transform-origin: 0 0;
+  transform: translateX(0);
+  margin: auto;
 }
 
 .clients-logos-container div img {
