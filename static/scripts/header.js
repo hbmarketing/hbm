@@ -6,7 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
   var nav2 = document.querySelector('.nav2');
   var navItem = document.querySelector('.nav-item');
 
-  header.style.height = (document.documentElement.clientHeight - head.offsetHeight) + 'px';
+  // header.style.height = (document.documentElement.clientHeight - head.offsetHeight) + 'px';
+  var vh = document.documentElement.clientHeight / 100;
+  header.style.height = ((document.documentElement.clientHeight - head.clientHeight) / vh) + 'vh';
 
   function nav2Animate(first, second) {
     nav2.animate(
@@ -34,7 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   window.addEventListener('resize', () => {
-    header.style.height = (document.documentElement.clientHeight - head.offsetHeight) + 'px';
+    // header.style.height = (document.documentElement.clientHeight - head.offsetHeight) + 'px';
+    vh = document.documentElement.clientHeight / 100;
+    header.style.height = ((document.documentElement.clientHeight - head.clientHeight) / vh) + 'vh';
 
     if (getComputedStyle(navItem).display == 'block') {
       burger.style.display = 'none';

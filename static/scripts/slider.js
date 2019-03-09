@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('resize', () => {
     // marketingKit.style.height = (document.documentElement.clientHeight - headOffsetHeight) + 'px';
-    var vhForHeader = document.documentElement.clientHeight / 100;
+    vhForHeader = document.documentElement.clientHeight / 100;
     marketingKit.style.height = ((document.documentElement.clientHeight - headOffsetHeight) / vhForHeader) + 'vh';
   })
 
