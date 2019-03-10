@@ -17,8 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (carousel.offsetWidth < clientsLogosContainer.offsetWidth) {
       let translater;
       if (event.target == rightScroll) {
-        translater = Math.abs(getLogosTranslateX()) + (transformValue - ((Math.abs(getLogosTranslateX()) + carousel.clientWidth) % transformValue));
-        clientsLogosContainer.style.transform = 'translateX(-' + translater + 'px)';
+        if (Math.abs(getLogosTranslateX()) < (clientsLogosContainer.offsetWidth - carousel.clientWidth)) {
+          translater = Math.abs(getLogosTranslateX()) + (transformValue - ((Math.abs(getLogosTranslateX()) + carousel.clientWidth) % transformValue));
+          clientsLogosContainer.style.transform = 'translateX(-' + translater + 'px)';
+        }
       }
       else if (event.target == leftScroll) {
         if (transformValue - (transformValue - (Math.abs(getLogosTranslateX()) % transformValue))) {
@@ -30,9 +32,5 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   })
-
-  window.addEventListener('resize', () => {
-
-  });
 
 });
