@@ -55,3 +55,25 @@
   color: white;
   padding: 0 0.2em;
 }
+
+.read-about {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 38px;
+  left: 45px;
+  right: 45px;
+  padding: 20px 10px;
+  font-size: 30px;
+  font-weight: lighter;
+}
+
+.info-about-kit span {
+  font-variant: small-caps;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.info-about-kit span:hover {
+  color: gray;
+}
