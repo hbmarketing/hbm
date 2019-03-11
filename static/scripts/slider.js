@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.addEventListener('click', event => {
 
-    if (event.target.className === 'fas fa-angle-left') {
+    if (event.target.className === 'to-left') {
       if (imageNameNumberDec()) {
         translateMarketingkitsBackground()
         indicatorsColorChange()
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // xhrRequest()
       }
     }
-    else if (event.target.className === 'fas fa-angle-right') {
+    else if (event.target.className === 'to-right') {
       if (imageNameNumberInc()) {
         translateMarketingkitsBackground()
         indicatorsColorChange()
