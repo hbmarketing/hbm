@@ -2,6 +2,10 @@ var imageNameNumber = 1;
 var imageNameNumberMax = 2;
 var imageNameNumberMin = 1;
 
+var kitTexts = {
+
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 
   var marketingKit = document.querySelector('.marketing-kit');
@@ -16,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // xhrRequest()
 
   window.addEventListener('resize', () => {
+    translateMarketingkitsBackground()
     vhForHeader = document.documentElement.clientHeight / 100;
     marketingKit.style.height = ((document.documentElement.clientHeight - headOffsetHeight) / vhForHeader) + 'vh';
   })
@@ -89,6 +94,10 @@ function setAnglesColor() {
   else if (imageNameNumber == imageNameNumberMax) {
     document.querySelector('.to-right').style.color = 'rgba(127, 127, 127, 0.7)';
   }
+}
+
+function setAboutKitInfo() {
+
 }
 
 // function xhrRequest() {
