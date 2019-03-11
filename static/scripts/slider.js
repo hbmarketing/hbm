@@ -7,20 +7,18 @@ document.addEventListener('DOMContentLoaded', () => {
   var marketingKit = document.querySelector('.marketing-kit');
   var headOffsetHeight = document.querySelector('.head').offsetHeight;
 
-  // marketingKit.style.height = (document.documentElement.clientHeight - headOffsetHeight) + 'px';
   var vhForHeader = document.documentElement.clientHeight / 100;
   marketingKit.style.height = ((document.documentElement.clientHeight - headOffsetHeight) / vhForHeader) + 'vh';
 
   indicatorsColorChange()
   setAnglesColor()
+  setUtpTextAndColor()
+  // xhrRequest()
 
   window.addEventListener('resize', () => {
-    // marketingKit.style.height = (document.documentElement.clientHeight - headOffsetHeight) + 'px';
     vhForHeader = document.documentElement.clientHeight / 100;
     marketingKit.style.height = ((document.documentElement.clientHeight - headOffsetHeight) / vhForHeader) + 'vh';
   })
-
-  // xhrRequest()
 
   document.addEventListener('click', event => {
 
@@ -29,21 +27,29 @@ document.addEventListener('DOMContentLoaded', () => {
         translateMarketingkitsBackground()
         indicatorsColorChange()
         setAnglesColor()
+        setUtpTextAndColor()
+        // xhrRequest()
       }
-      // xhrRequest()
     }
     else if (event.target.className === 'fas fa-angle-right') {
       if (imageNameNumberInc()) {
         translateMarketingkitsBackground()
         indicatorsColorChange()
         setAnglesColor()
+        setUtpTextAndColor()
+        // xhrRequest()
       }
-      // xhrRequest()
     }
 
   });
 
 });
+
+function setUtpTextAndColor() {
+  let current = document.querySelector('#indicator-' + imageNameNumber);
+  document.querySelector('.about-kit-text').innerHTML = current.dataset.utp;
+  document.querySelector('.info-about-kit').style.color =  current.dataset.color;
+}
 
 function imageNameNumberInc() {
   if (imageNameNumber < imageNameNumberMax) {
