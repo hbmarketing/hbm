@@ -27,6 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log(event)
     console.log(event.target)
 
+    document.querySelector('.our-clients').style.display = 'none';
+
     if (event.target == toLeft) {
       console.log(event.currentTarget)
       if (imageNameNumberDec()) {
@@ -35,7 +37,9 @@ document.addEventListener('DOMContentLoaded', () => {
         setAnglesColor()
         setUtpTextAndColor()
         // xhrRequest()
+        document.querySelector('.kit-images-container').style.display = 'none';
       }
+      document.querySelector('.head').style.display = 'none';
     }
     else if (event.target == toRight) {
       console.log(event.currentTarget)
@@ -45,7 +49,9 @@ document.addEventListener('DOMContentLoaded', () => {
         setAnglesColor()
         setUtpTextAndColor()
         // xhrRequest()
+        document.querySelector('.kit-images-container').style.display = 'none';
       }
+      document.querySelector('.head').style.display = 'none';
     }
 
   });
