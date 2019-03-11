@@ -9,30 +9,16 @@ document.addEventListener('DOMContentLoaded', () => {
   var vh = document.documentElement.clientHeight / 100;
   header.style.height = ((document.documentElement.clientHeight - head.clientHeight) / vh) + 'vh';
 
-  function nav2Animate(first, second) {
-    nav2.animate(
-      [
-        {right: first},
-        {right: second}
-      ],
-      {
-        duration: 100,
-        easing: "linear",
-        fill: "forwards",
-      }
-    );
-  }
-
   head.addEventListener('click', event => {
     if (event.target == burger) {
       burger.style.display = 'none';
       close.style.display = 'block';
-      nav2Animate('-100%', '0');
+      nav2.style.transform = 'translateX(0px)';
     }
     else if (event.target == close) {
       close.style.display = 'none';
       burger.style.display = 'block';
-      nav2Animate('0', '-100%');
+      nav2.style.transform = 'translateX(1000%)';
     }
   });
 

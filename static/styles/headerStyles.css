@@ -70,14 +70,17 @@ nav {
 .nav2 {
   display: flex;
   flex-direction: column;
-  position: fixed;
+  position: absolute;
   top: 95px;
-  right: -100%;
+  right: 0;
   z-index: 2999;
   background-color: black;
   font-size: 20px;
   font-weight: bold;
   padding: 30px 20px;
+  transform: translateX(1000%);
+  transform-origin: top right;
+  transition: all 0.2s linear;
 }
 
 .nav2-item {
