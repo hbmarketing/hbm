@@ -34,6 +34,7 @@
   position: absolute;
   height: 100%;
   top: 0;
+  z-index: 4000;
   font-size: 70px;
   color: white;
   background-color: red;
