@@ -23,16 +23,18 @@ document.addEventListener('DOMContentLoaded', () => {
     );
   }
 
-  burger.onclick = () => {
-    burger.style.display = 'none';
-    close.style.display = 'block';
-    nav2Animate('-100%', '0');
-  }
-  close.onclick = () => {
-    close.style.display = 'none';
-    burger.style.display = 'block';
-    nav2Animate('0', '-100%');
-  }
+  head.addEventListener('click', event => {
+    if (event.target == burger) {
+      burger.style.display = 'none';
+      close.style.display = 'block';
+      nav2Animate('-100%', '0');
+    }
+    else if (event.target == close) {
+      close.style.display = 'none';
+      burger.style.display = 'block';
+      nav2Animate('0', '-100%');
+    }
+  });
 
   window.addEventListener('resize', () => {
     vh = document.documentElement.clientHeight / 100;
