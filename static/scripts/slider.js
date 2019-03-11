@@ -24,8 +24,11 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
   document.addEventListener('click', event => {
+    console.log(event)
+    console.log(event.target)
 
-    if (event.currentTarget == toLeft) {
+    if (event.target == toLeft) {
+      console.log(event.currentTarget)
       if (imageNameNumberDec()) {
         translateMarketingkitsBackground()
         indicatorsColorChange()
@@ -34,7 +37,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // xhrRequest()
       }
     }
-    else if (event.currentTarget.className == toRight) {
+    else if (event.target == toRight) {
+      console.log(event.currentTarget)
       if (imageNameNumberInc()) {
         translateMarketingkitsBackground()
         indicatorsColorChange()

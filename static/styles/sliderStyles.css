@@ -32,7 +32,8 @@
 .to-left,
 .to-right {
   position: absolute;
-  top: 45%;
+  height: 100%;
+  top: 0;
   font-size: 70px;
   color: white;
   background-color: red;
