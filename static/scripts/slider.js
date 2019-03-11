@@ -2,14 +2,12 @@ var imageNameNumber = 1;
 var imageNameNumberMax = 2;
 var imageNameNumberMin = 1;
 
-var kitTexts = {
-
-}
-
 document.addEventListener('DOMContentLoaded', () => {
 
   var marketingKit = document.querySelector('.marketing-kit');
   var headOffsetHeight = document.querySelector('.head').offsetHeight;
+  var toLeft = document.querySelector('.to-left');
+  var toRight = document.querySelector('.to-right');
 
   var vhForHeader = document.documentElement.clientHeight / 100;
   marketingKit.style.height = ((document.documentElement.clientHeight - headOffsetHeight) / vhForHeader) + 'vh';
@@ -27,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.addEventListener('click', event => {
 
-    if (event.target.className === 'to-left') {
+    if (event.currentTarget == toLeft) {
       if (imageNameNumberDec()) {
         translateMarketingkitsBackground()
         indicatorsColorChange()
@@ -36,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // xhrRequest()
       }
     }
-    else if (event.target.className === 'to-right') {
+    else if (event.currentTarget.className == toRight) {
       if (imageNameNumberInc()) {
         translateMarketingkitsBackground()
         indicatorsColorChange()
