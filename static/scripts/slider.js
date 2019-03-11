@@ -6,8 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   var marketingKit = document.querySelector('.marketing-kit');
   var headOffsetHeight = document.querySelector('.head').offsetHeight;
-  var toLeft = document.querySelector('.to-left');
-  var toRight = document.querySelector('.to-right');
 
   var vhForHeader = document.documentElement.clientHeight / 100;
   marketingKit.style.height = ((document.documentElement.clientHeight - headOffsetHeight) / vhForHeader) + 'vh';
@@ -23,35 +21,25 @@ document.addEventListener('DOMContentLoaded', () => {
     marketingKit.style.height = ((document.documentElement.clientHeight - headOffsetHeight) / vhForHeader) + 'vh';
   })
 
-  document.addEventListener('click', event => {
-    console.log(event)
-    console.log(event.target)
+  marketingKit.addEventListener('click', event => {
 
-    document.querySelector('.our-clients').style.display = 'none';
-
-    if (event.target == toLeft) {
-      console.log(event.currentTarget)
+    if (event.target.className === 'fas fa-angle-left') {
       if (imageNameNumberDec()) {
         translateMarketingkitsBackground()
         indicatorsColorChange()
         setAnglesColor()
         setUtpTextAndColor()
         // xhrRequest()
-        document.querySelector('.kit-images-container').style.display = 'none';
       }
-      document.querySelector('.head').style.display = 'none';
     }
-    else if (event.target == toRight) {
-      console.log(event.currentTarget)
+    else if (event.target.className === 'fas fa-angle-right') {
       if (imageNameNumberInc()) {
         translateMarketingkitsBackground()
         indicatorsColorChange()
         setAnglesColor()
         setUtpTextAndColor()
         // xhrRequest()
-        document.querySelector('.kit-images-container').style.display = 'none';
       }
-      document.querySelector('.head').style.display = 'none';
     }
 
   });
@@ -102,10 +90,6 @@ function setAnglesColor() {
   else if (imageNameNumber == imageNameNumberMax) {
     document.querySelector('.to-right').style.color = 'rgba(127, 127, 127, 0.7)';
   }
-}
-
-function setAboutKitInfo() {
-
 }
 
 // function xhrRequest() {

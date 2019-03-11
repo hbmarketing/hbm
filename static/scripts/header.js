@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
   var nav2 = document.querySelector('.nav2');
   var navItem = document.querySelector('.nav-item');
 
-  // header.style.height = (document.documentElement.clientHeight - head.offsetHeight) + 'px';
   var vh = document.documentElement.clientHeight / 100;
   header.style.height = ((document.documentElement.clientHeight - head.clientHeight) / vh) + 'vh';
 
@@ -36,14 +35,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   window.addEventListener('resize', () => {
-    // header.style.height = (document.documentElement.clientHeight - head.offsetHeight) + 'px';
     vh = document.documentElement.clientHeight / 100;
     header.style.height = ((document.documentElement.clientHeight - head.clientHeight) / vh) + 'vh';
 
     if (getComputedStyle(navItem).display == 'block') {
       burger.style.display = 'none';
       close.style.display = 'none';
-      nav2.style.right = '-100%';
     }
     else if (getComputedStyle(navItem).display == 'none' && getComputedStyle(close).display == 'none') {
       burger.style.display = 'block';
