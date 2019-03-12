@@ -2,6 +2,61 @@ var imageNameNumber = 1;
 var imageNameNumberMax = 2;
 var imageNameNumberMin = 1;
 
+var kitInfoContent = {
+  1: [
+    [
+      {
+        createElement: 'h1',
+        innerHTML: 'заголовок',
+        className: 'class1'
+      },
+      {
+        createElement: 'p',
+        innerHTML: 'text',
+        className: 'class1'
+      }
+    ],
+    [
+      {
+        createElement: 'h1',
+        innerHTML: 'заголовок2',
+        className: 'class1'
+      },
+      {
+        createElement: 'p',
+        innerHTML: 'text',
+        className: 'class1'
+      }
+    ]
+  ],
+  2: [
+    [
+      {
+        createElement: 'h1',
+        innerHTML: 'заголовок3',
+        className: 'class1'
+      },
+      {
+        createElement: 'p',
+        innerHTML: 'text',
+        className: 'class1'
+      }
+    ],
+    [
+      {
+        createElement: 'h1',
+        innerHTML: 'заголовок4',
+        className: 'class1'
+      },
+      {
+        createElement: 'p',
+        innerHTML: 'text',
+        className: 'class1'
+      }
+    ]
+  ]
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 
   var marketingKit = document.querySelector('.marketing-kit');
@@ -13,6 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
   indicatorsColorChange()
   setAnglesColor()
   setUtpTextAndColor()
+  getKitInfoContent()
   // xhrRequest()
 
   window.addEventListener('resize', () => {
@@ -29,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
         indicatorsColorChange()
         setAnglesColor()
         setUtpTextAndColor()
+        getKitInfoContent()
         // xhrRequest()
       }
     }
@@ -38,6 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
         indicatorsColorChange()
         setAnglesColor()
         setUtpTextAndColor()
+        getKitInfoContent()
         // xhrRequest()
       }
     }
@@ -90,6 +148,22 @@ function setAnglesColor() {
   else if (imageNameNumber == imageNameNumberMax) {
     document.querySelector('.to-right').style.color = 'rgba(127, 127, 127, 0.7)';
   }
+}
+
+function getKitInfoContent() {
+  if (document.querySelector('.chapter')) document.querySelectorAll('.chapter').forEach(elem => {elem.remove()})
+  const content = kitInfoContent[imageNameNumber];
+  content.forEach(chapter => {
+    const divChapter = document.createElement('div');
+    divChapter.className = 'chapter';
+    chapter.forEach(info => {
+      const element = document.createElement(info.createElement);
+      element.className = info.className;
+      element.innerHTML = info.innerHTML;
+      divChapter.append(element);
+    });
+    document.querySelector('.kit-info-content').append(divChapter);
+  });
 }
 
 // function xhrRequest() {
