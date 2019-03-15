@@ -79,6 +79,8 @@
 }
 
 .kit {
+  display: flex;
+  flex-direction: column;
   position: fixed;
   top: 0;
   left: 0;
@@ -89,9 +91,15 @@
 }
 
 .kit-info {
-  height: 90%;
-  margin-right: 70px;
+  padding: 5px;
+  font-weight: bold;
+  font-size: 25px;
+  text-align: right;
+  color: white;
+  background-color: black;
+}
+
+.kit-info-content {
+  flex-grow: 1;
   background-color: white;
-  /* border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px; */
 }
