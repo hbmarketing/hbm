@@ -162,7 +162,7 @@ function getKitInfoContent() {
       element.innerHTML = info.innerHTML;
       divChapter.append(element);
     });
-    document.querySelector('.kit-info-content').append(divChapter);
+    document.querySelector('.kit-info-content').insertBefore(divChapter, document.querySelector('.aqd'));
   });
 }
 

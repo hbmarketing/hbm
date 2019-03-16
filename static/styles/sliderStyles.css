@@ -91,12 +91,16 @@
 }
 
 .kit-info {
-  padding: 5px;
-  font-weight: bold;
+  padding: 5px 10px;
   font-size: 25px;
   text-align: right;
   color: white;
   background-color: black;
+}
+
+.kit-info span {
+  cursor: pointer;
+  font-weight: 400;
 }
 
 .kit-info-content {
