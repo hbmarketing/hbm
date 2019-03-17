@@ -4,6 +4,7 @@
   height: 100vh;
   min-height: 500px;
   overflow-x: hidden;
+  margin: 0;
 }
 
 .kit-images-container {
@@ -85,6 +86,9 @@
   top: 0;
   left: 0;
   z-index: 4000;
+  transform-origin: right top;
+  transform: translateX(-100%);
+  transition: all 0.5s linear;
   width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.9);
@@ -106,4 +110,8 @@
 .kit-info-content {
   flex-grow: 1;
   background-color: white;
+}
+
+.chapter {
+  color: black;
 }
