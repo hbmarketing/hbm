@@ -6,7 +6,7 @@ var kitInfoContent = {
   1: [
     [
       {
-        createElement: 'h1',
+        createElement: 'h2',
         innerHTML: 'заголовок',
         className: 'class1'
       },
@@ -18,7 +18,7 @@ var kitInfoContent = {
     ],
     [
       {
-        createElement: 'h1',
+        createElement: 'h2',
         innerHTML: 'заголовок2',
         className: 'class1'
       },
@@ -32,7 +32,7 @@ var kitInfoContent = {
   2: [
     [
       {
-        createElement: 'h1',
+        createElement: 'h2',
         innerHTML: 'заголовок3',
         className: 'class1'
       },
@@ -44,7 +44,7 @@ var kitInfoContent = {
     ],
     [
       {
-        createElement: 'h1',
+        createElement: 'h2',
         innerHTML: 'заголовок4',
         className: 'class1'
       },
@@ -180,7 +180,7 @@ function translateKitInfo(property) {
   else {
     document.querySelector('.kit').style.transform = 'translateX(-100%)';
     document.body.style.overflow = 'auto';
-    document.body.style.overflowX = 'hiiden';
+    document.body.style.overflowX = 'hidden';
   }
 
 }
