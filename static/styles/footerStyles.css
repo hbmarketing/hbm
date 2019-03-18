@@ -8,11 +8,11 @@ footer {
 }
 
 .contacts {
-  width: 50%;
+  flex-grow: 1;
 }
 
 .soc-nets {
-  width: 50%;
+  flex-grow: 1;
 }
 
 .soc-icon {
