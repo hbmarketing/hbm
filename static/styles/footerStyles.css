@@ -7,19 +7,16 @@ footer {
   color: white;
 }
 
-.contacts {
-  flex-grow: 1;
-}
-
+.contacts,
 .soc-nets {
-  padding: 0 10px;
+  display: flex;
+  justify-content: center;
   flex-grow: 1;
 }
 
 .soc-icon {
   display: inline-block;
-  padding: 0 10px;
-  width: 30px;
+  width: 20px;
   text-align: right;
   margin-right: 10px;
 }
