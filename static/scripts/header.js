@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   var vh = document.documentElement.clientHeight / 100;
   header.style.height = ((document.documentElement.clientHeight - head.clientHeight) / vh) + 'vh';
-  head.style.width = (document.documentElement.clientWidth - 30) + 'px';
+  // head.style.width = (document.documentElement.clientWidth - 30) + 'px';
 
   head.addEventListener('click', event => {
     if (event.target == burger) {
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('resize', () => {
     vh = document.documentElement.clientHeight / 100;
     header.style.height = ((document.documentElement.clientHeight - head.clientHeight) / vh) + 'vh';
-    head.style.width = (document.documentElement.clientWidth - 30) + 'px';
+    // head.style.width = (document.documentElement.clientWidth - 30) + 'px';
 
     if (getComputedStyle(navItem).display == 'block') {
       burger.style.display = 'none';
