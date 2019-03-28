@@ -60,13 +60,19 @@
 .read-about {
   display: flex;
   justify-content: center;
+  align-items: center;
   position: absolute;
+  top: 0;
   bottom: 38px;
   left: 45px;
   right: 45px;
   padding: 20px 10px;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 100;
+}
+
+.info-about-kit > span {
+  text-decoration: underline dotted;
 }
 
 .info-about-kit span {

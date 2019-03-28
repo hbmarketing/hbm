@@ -62,6 +62,7 @@ nav {
 .icon-burger {
   display: none;
   font-size: 55px;
+  line-height: 0;
   cursor: pointer;
 }
 .icon-close {
