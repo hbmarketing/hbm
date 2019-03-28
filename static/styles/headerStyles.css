@@ -7,6 +7,7 @@ header {
   height: 100vh;
   min-height: 500px;
   margin-top: 98px;
+  background-color: rgba(0, 0, 0, 0.95);
 }
 
 .head {
@@ -103,11 +104,13 @@ nav {
 }
 
 .utp {
+  color: white;
   font-size: 40px;
   padding: 20px;
 }
 
 .utp-number {
+  color: white;
   font-size: 30px;
   padding: 20px;
 }

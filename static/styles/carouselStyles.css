@@ -1,6 +1,7 @@
 .our-clients {
   max-width: 100%;
   display: flex;
+  background-color: white;
 }
 
 .carousel {
