@@ -18,7 +18,7 @@ header {
   z-index: 3000;
   background-color: black;
   color: white;
-  padding: 15px;
+  padding: 10px 15px;
 }
 
 .logo {
@@ -28,7 +28,7 @@ header {
 
 .hbm-text {
   font-weight: bold;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .hayr-text {
@@ -41,17 +41,17 @@ nav {
   flex-grow: 1;
   justify-content: flex-end;
   align-items: center;
-  font-weight: bold;
-  font-size: 20px;
+  font-weight: normal;
+  font-size: 18px;
 }
 
 .nav-item {
   margin: 0 10px;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 
 .nav-item:hover {
-  border-bottom: 3px solid white;
+  border-bottom: 2px solid white;
 }
 
 .nav-item span {
@@ -76,13 +76,14 @@ nav {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 95px;
+  top: 65px;
   right: 0;
   z-index: 2999;
   background-color: black;
-  font-size: 20px;
-  font-weight: bold;
+  font-weight: normal;
+  font-size: 18px;
   padding: 30px 20px;
+  box-sizing: border-box;
   transform: translateX(1000%);
   transform-origin: top right;
   transition: all 0.2s linear;
@@ -91,10 +92,12 @@ nav {
 .nav2-item {
   margin: 5px 0;
   padding-left: 10px;
+  padding-right: 2px;
 }
 
 .nav2-item:hover {
-  border-left: 3px solid white;
+  padding-right: 0px;
+  border-left: 2px solid white;
 }
 
 .nav2-item span {
