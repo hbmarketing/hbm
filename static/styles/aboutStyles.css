@@ -7,22 +7,28 @@
 }
 
 .about-company {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  font-weight: 400;
-}
-
-.about-company > article {
-  width: 95%;
+  margin: 20px 0;
+  font-weight: 300;
+  color: black;
+  background-color: white;
 }
 
 .about-text-elem {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
   margin: 20px 0;
-  font-size: 1.5vw;
+  font-size: 20px;
+}
+
+.about-text-elem:nth-child(2n) {
+  background-color: #ccc;
+}
+
+.about-text-elem div:not(.about-text-icon) {
+  flex-grow: 1;
+  padding: 0 20px;
 }
 
 .about-text-icon {
@@ -31,5 +37,5 @@
 
 .about-text-icon > i {
   vertical-align: middle;
-  font-size: 5vw;
+  font-size: 100px;
 }
