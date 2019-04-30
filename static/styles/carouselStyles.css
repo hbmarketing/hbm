@@ -1,7 +1,7 @@
 .our-clients {
+  position: relative;
   max-width: 100%;
   display: flex;
-  background-color: white;
 }
 
 .carousel {
@@ -12,9 +12,26 @@
 
 .scroll-left,
 .scroll-right {
-  background-color: red;
-  flex-basis: 40px;
-  min-width: 40px;
+  position: absolute;
+  top: 22px;
+  z-index: 7000;
+  align: center;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.scroll-left {
+  left: 0;
+  text-align: left;
+}
+
+.scroll-right {
+  right: 0;
+  text-align: right;
+}
+
+.fa-chevron-left,
+.fa-chevron-right {
+  font-size: 10rem;
 }
 
 .clients-logos-container {

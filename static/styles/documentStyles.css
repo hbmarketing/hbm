@@ -2,6 +2,4 @@ body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   overflow-x: hidden;
-  background: rgba(255, 255, 255, 0.9) url('../header.jpg') center center no-repeat fixed;
-  background-size: auto 100vh;
 }
