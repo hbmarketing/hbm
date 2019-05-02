@@ -1,0 +1,26 @@
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 100%;
+  background-color: black;
+  color: white;
+}
+
+.contacts,
+.soc-nets {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.soc-icon {
+  display: inline-block;
+  width: 20px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+footer div a {
+  color: white;
+}
