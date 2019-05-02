@@ -1,13 +1,41 @@
-.about-company {
+.about-us {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   width: 100%;
-  margin: 0;
   color: white;
-  font-weight: 400;
   background-color: black;
 }
 
-.about-company div {
-  width: 95%;
+.about-company {
+  margin: 20px 0;
+  font-weight: 300;
+  color: black;
+  background-color: white;
+}
+
+.about-text-elem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin: 20px 0;
+  font-size: 20px;
+}
+
+.about-text-elem:nth-child(2n) {
+  background-color: #ccc;
+}
+
+.about-text-elem div:not(.about-text-icon) {
+  flex-grow: 1;
+  padding: 0 20px;
+}
+
+.about-text-icon {
+  padding: 0 20px;
+}
+
+.about-text-icon > i {
+  vertical-align: middle;
+  font-size: 100px;
 }

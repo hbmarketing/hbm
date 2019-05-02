@@ -2,61 +2,6 @@ var imageNameNumber = 1;
 var imageNameNumberMax = 2;
 var imageNameNumberMin = 1;
 
-var kitInfoContent = {
-  1: [
-    [
-      {
-        createElement: 'h2',
-        innerHTML: 'заголовок',
-        className: 'class1'
-      },
-      {
-        createElement: 'p',
-        innerHTML: 'text',
-        className: 'class1'
-      }
-    ],
-    [
-      {
-        createElement: 'h2',
-        innerHTML: 'заголовок2',
-        className: 'class1'
-      },
-      {
-        createElement: 'p',
-        innerHTML: 'text',
-        className: 'class1'
-      }
-    ]
-  ],
-  2: [
-    [
-      {
-        createElement: 'h2',
-        innerHTML: 'заголовок3',
-        className: 'class1'
-      },
-      {
-        createElement: 'p',
-        innerHTML: 'text',
-        className: 'class1'
-      }
-    ],
-    [
-      {
-        createElement: 'h2',
-        innerHTML: 'заголовок4',
-        className: 'class1'
-      },
-      {
-        createElement: 'p',
-        innerHTML: 'text',
-        className: 'class1'
-      }
-    ]
-  ]
-}
-
 document.addEventListener('DOMContentLoaded', () => {
 
   var marketingKit = document.querySelector('.marketing-kit');
@@ -68,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
   indicatorsColorChange()
   setAnglesColor()
   setUtpTextAndColor()
-  getKitInfoContent()
   // xhrRequest()
 
   window.addEventListener('resize', () => {
@@ -85,7 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
         indicatorsColorChange()
         setAnglesColor()
         setUtpTextAndColor()
-        getKitInfoContent()
         // xhrRequest()
       }
     }
@@ -95,15 +38,14 @@ document.addEventListener('DOMContentLoaded', () => {
         indicatorsColorChange()
         setAnglesColor()
         setUtpTextAndColor()
-        getKitInfoContent()
         // xhrRequest()
       }
     }
     else if (event.target.className === 'kit-info-transformer-0') {
-      translateKitInfo(true)
+      // translateKitInfo(true)
     }
     else if (event.target.className === 'kit-info-transformer-100') {
-      translateKitInfo(false)
+      // translateKitInfo(false)
     }
   });
 
@@ -155,35 +97,19 @@ function setAnglesColor() {
   }
 }
 
-function getKitInfoContent() {
-  if (document.querySelector('.chapter')) document.querySelectorAll('.chapter').forEach(elem => {elem.remove()})
-  const content = kitInfoContent[imageNameNumber];
-  content.forEach(chapter => {
-    const divChapter = document.createElement('div');
-    divChapter.className = 'chapter';
-    chapter.forEach(info => {
-      const element = document.createElement(info.createElement);
-      element.className = info.className;
-      element.innerHTML = info.innerHTML;
-      divChapter.append(element);
-    });
-    document.querySelector('.kit-info-content').insertBefore(divChapter, document.querySelector('.aqd'));
-  });
-}
+// function translateKitInfo(property) {
 
-function translateKitInfo(property) {
+//   if (property) {
+//     document.querySelector('.kit').style.transform = 'translateX(0)';
+//     document.body.style.overflow = 'hidden';
+//   }
+//   else {
+//     document.querySelector('.kit').style.transform = 'translateX(-100%)';
+//     document.body.style.overflow = 'auto';
+//     document.body.style.overflowX = 'hidden';
+//   }
 
-  if (property) {
-    document.querySelector('.kit').style.transform = 'translateX(0)';
-    document.body.style.overflow = 'hidden';
-  }
-  else {
-    document.querySelector('.kit').style.transform = 'translateX(-100%)';
-    document.body.style.overflow = 'auto';
-    document.body.style.overflowX = 'hidden';
-  }
-
-}
+// }
 
 // function xhrRequest() {
 //   const xhr = new XMLHttpRequest();

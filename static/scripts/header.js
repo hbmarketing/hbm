@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (getComputedStyle(navItem).display == 'block') {
       burger.style.display = 'none';
       close.style.display = 'none';
+      nav2.style.transform = 'translateX(1000%)';
     }
     else if (getComputedStyle(navItem).display == 'none' && getComputedStyle(close).display == 'none') {
       burger.style.display = 'block';
