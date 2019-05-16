@@ -6,29 +6,8 @@
   background-color: black;
 }
 
-.about-us-title {
-  padding: 20px;
-  font-size: 35px;
-  font-weight: 500;
-}
-
-.about-us-title a {
-  text-decoration: none;
-  color: white;
-  transition: all 0.5s linear;
-}
-
-#about-view {
-  display: none;
-}
-
-#about-view:checked ~ .about-company {
-  display: block;
-}
-
 .about-company {
-  display: none;
-  margin-bottom: 20px;
+  margin: 20px 0;
   font-weight: 300;
   color: black;
   background-color: white;
@@ -57,5 +36,6 @@
 }
 
 .about-text-icon > i {
+  vertical-align: middle;
   font-size: 100px;
 }

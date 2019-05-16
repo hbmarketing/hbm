@@ -1,0 +1,46 @@
+.our-clients {
+  position: relative;
+  max-width: 100%;
+  display: flex;
+}
+
+.carousel {
+  flex-grow: 1;
+  min-width: 200px;
+  overflow-x: hidden;
+}
+
+.scroll-left,
+.scroll-right {
+  position: absolute;
+  top: 22px;
+  z-index: 2998;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.scroll-left {
+  left: 0;
+  text-align: left;
+}
+
+.scroll-right {
+  right: 0;
+  text-align: right;
+}
+
+.fa-chevron-left,
+.fa-chevron-right {
+  font-size: 10rem;
+}
+
+.clients-logos-container {
+  display: flex;
+  width: 1400px;
+  transform-origin: 0 0;
+  transform: translateX(0);
+  margin: auto;
+}
+
+.clients-logos-container div img {
+  width: 200px;
+}

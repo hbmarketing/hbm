@@ -111,6 +111,12 @@ nav {
   padding: 20px;
 }
 
+.utp-number {
+  color: black;
+  font-size: 30px;
+  padding: 20px;
+}
+
 @media screen and (max-width: 719px) {
   .nav-item {
     display: none;
