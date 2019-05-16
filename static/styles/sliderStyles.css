@@ -15,6 +15,7 @@
   display: flex;
   justify-content: center;
   width: 100vw;
+  padding: 45px;
   width: calc(100% / 4);
 }
 
