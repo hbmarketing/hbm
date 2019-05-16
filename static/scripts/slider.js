@@ -1,6 +1,6 @@
 var imageNameNumber = 1;
-var imageNameNumberMax = 4;
-var imageNameNumberMin = 1;
+const imageNameNumberMax = 4;
+const imageNameNumberMin = 1;
 
 document.addEventListener('DOMContentLoaded', () => {
 
